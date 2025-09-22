@@ -1,0 +1,45 @@
+:root {
+   /* main app */
+  --bg-outer:    #3B3B3C; /* page background behind the app */
+  --bg-main:     #0F1113; /* main app background / canvas */
+  --sidebar-bg:  #0D0F11; /* sidebar panel */
+  --panel-bg:    #151617; /* inner panels / columns */
+  --card-bg:     #1B1C1E; /* cards / note tiles */
+  --card-border: #262728; /* subtle borders / separators */
+
+  /* text */
+  --text-primary:   #E8E9EB; /* main headings / body */
+  --text-secondary: #9DA0A5; /* secondary / meta text */
+  --text-muted:     #737579; /* very muted / disabled */
+
+  /* accents */
+  --accent-blue:   #4B6BFF; /* progress bars, primary accents */
+  --accent-blue-2: #7AA2FF; /* lighter accent (badges) */
+  --accent-orange: #FF9A3D; /* medium / priority tag */
+  --accent-red:    #FF5C6C; /* high priority / danger */
+  --accent-green:  #2ECC71; /* success / done indicators */
+
+  /* UI extras */
+  --ui-shadow: rgba(0,0,0,0.6);
+  --glass: rgba(255,255,255,0.02);
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-primary);
+}
+
+.sidebar{
+    height: 100vh;
+    width: 250px;
+    background-color: var(--bg-sidebar);
+}
