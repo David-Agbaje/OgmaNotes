@@ -1,5 +1,4 @@
 :root {
-   /* main app */
   --bg-outer:    #3B3B3C; /* page background behind the app */
   --bg-main:     #0F1113; /* main app background / canvas */
   --sidebar-bg:  #0D0F11; /* sidebar panel */
@@ -7,19 +6,16 @@
   --card-bg:     #1B1C1E; /* cards / note tiles */
   --card-border: #262728; /* subtle borders / separators */
 
-  /* text */
   --text-primary:   #E8E9EB; /* main headings / body */
   --text-secondary: #9DA0A5; /* secondary / meta text */
   --text-muted:     #737579; /* very muted / disabled */
 
-  /* accents */
   --accent-blue:   #4B6BFF; /* progress bars, primary accents */
   --accent-blue-2: #7AA2FF; /* lighter accent (badges) */
   --accent-orange: #FF9A3D; /* medium / priority tag */
   --accent-red:    #FF5C6C; /* high priority / danger */
   --accent-green:  #2ECC71; /* success / done indicators */
 
-  /* UI extras */
   --ui-shadow: rgba(0,0,0,0.6);
   --glass: rgba(255,255,255,0.02);
 } 
@@ -31,15 +27,42 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: var(--bg-outer);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary)
+}
+
 main{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-main);
 }
 
 .sidebar{
+    width: 15rem;
     height: 100vh;
-    width: 250px;
-    background-color: var(--bg-sidebar);
+    background-color: var(--sidebar-bg);
 }
+
+.btn-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.quick-links{
+    margin-bottom: -10px;
+    color: var(--text-secondary);
+}
+
+.items-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.items{
+    text-align: center;
+}
+
