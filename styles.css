@@ -5,6 +5,8 @@
   --panel-bg:    #151617; /* inner panels / columns */
   --card-bg:     #1B1C1E; /* cards / note tiles */
   --card-border: #262728; /* subtle borders / separators */
+  --bg-search: #1A1D21;  /* Search Bar background*/
+  --bg-button:  rgba(59, 130, 246, 0.4);
 
   --text-primary:   #E8E9EB; /* main headings / body */
   --text-secondary: #9DA0A5; /* secondary / meta text */
@@ -16,7 +18,7 @@
   --accent-red:    #FF5C6C; /* high priority / danger */
   --accent-green:  #2ECC71; /* success / done indicators */
 
-  --ui-shadow: rgba(0,0,0,0.6);
+  --ui-shadow: 0 0 20px rgba(255,255,255,0.15);
   --glass: rgba(255,255,255,0.02);
 } 
 
@@ -43,6 +45,40 @@ main{
     background-color: var(--sidebar-bg);
 }
 
+.search-notes, .new-note{
+     width: 95%;
+     height: 2rem;
+     border-radius: 10px;
+     background-color: var(--bg-search);
+     color: var(--text-primary);
+     margin: auto;
+     border: none;
+}
+
+.search-notes{
+    padding: 5px;
+    transition: 0.3s ease-in;
+}
+
+.search-notes:focus{
+    outline: none;
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.25));
+    transform: translateY(-3px);
+}
+
+.new-note{
+    background-color: var(--bg-button);
+    transition: 0.3s ease-in;
+}
+
+.new-note:hover{
+    font-weight: 500;
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.25));
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+
 .btn-input-container{
     display: flex;
     flex-direction: column;
@@ -53,6 +89,7 @@ main{
 .quick-links{
     margin-bottom: -10px;
     color: var(--text-secondary);
+    text-align: left;
 }
 
 .items-container{
@@ -60,9 +97,21 @@ main{
     flex-direction: column;
     gap: 30px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .items{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 2em;
+    transition: 0.3s ease;
+}
+
+.items:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.25));
+    border: none;
 }
 
